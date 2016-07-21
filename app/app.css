@@ -1,0 +1,44 @@
+/* app css stylesheet */
+
+/*.menu*/
+/*{*/
+    /*border: 20px black;*/
+    /*list-style-type: none;*/
+    /*margin: 3px;*/
+    /*padding: 5px;*/
+    /*width: auto;*/
+    /*background-color: #347900;*/
+    /*height: 100%; !* Full height *!*/
+    /*position: fixed; !* Make it stick, even on scroll *!*/
+    /*overflow: auto; !* Enable scrolling if the sidenav has too much content *!*/
+/*}*/
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: #f1f1f1;
+}
+
+li a {
+    display: block;
+    color: black;
+    padding: 8px 0 8px 16px;
+    text-decoration: none;
+}
+
+li a.active {
+    background-color: #4CAF50;
+    color: black;
+}
+
+li a:hover:not(.active) {
+    background-color: #555;
+    color: black;
+}
+
+.item-link
+{
+    color: black;
+}

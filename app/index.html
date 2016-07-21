@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<!--[if lt IE 7]>      <!--&lt;!&ndash;<html lang="en" ng-app="worldCup" class="no-js lt-ie9 lt-ie8 lt-ie7">&ndash;&gt;--> <![endif]-->
+<!--[if IE 7]>         <!--<html lang="en" ng-app="worldCup" class="no-js lt-ie9 lt-ie8">--> <![endif]-->
+<!--[if IE 8]>         <!--<html lang="en" ng-app="worldCup" class="no-js lt-ie9">--> <![endif]-->
+<!--[if gt IE 8]><!--<! <html lang="en" ng-app="worldCup" class="no-js">--> <![endif]-->
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.4/angular.js"></script>
+    <script type="text/javascript" src="angular.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+    <link rel="stylesheet" href="app.css">
+    <!--<meta charset="utf-8">-->
+    <!--<meta http-equiv="X-UA-Compatible" content="IE=edge">-->
+    <!--<title>My AngularJS App</title>-->
+    <!--<meta name="description" content="">-->
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
+    <!--<link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">-->
+    <!--<link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">-->
+    <!--<script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>-->
+</head>
+
+<body ng-app="worldCup">
+
+    <!--[if lt IE 7]>
+    <!--<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>-->
+    <!--<![endif]&ndash;&gt;-->
+
+    <!--<div>Angular seed app: v<span app-version></span></div>-->
+
+    <!-- In production use:
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
+    -->
+    <!--<script src="bower_components/angular/angular.js"></script>-->
+    <!--<script src="bower_components/angular-route/angular-route.js"></script>-->
+    <!--<script src="app.js"></script>-->
+    <!--<script src="view1/view1.js"></script>-->
+    <!--<script src="view2/view2.js"></script>-->
+    <!--<script src="components/version/version.js"></script>-->
+    <!--<script src="components/version/version-directive.js"></script>-->
+    <!--<script src="components/version/interpolate-filter.js"></script>-->
+
+    <span class="org">
+        <ul class="menu-list" ng-controller="menuController as mc">
+            <li class="menu-item" ng-repeat="menuItem in mc.menuItems"><a class="item-link" ng-click="alert('hey');">{{menuItem.label}}</a></li>
+        </ul>
+    </span>
+    <!--<div class="list-container" ng-controller="listController as lc">-->
+        <!--{{}}-->
+        <!--<ul class="list-{{}}">-->
+            <!--<li class="list-item" ng-repeat="listItem in lc.listItems"><a href="" ng-click="">{{listItem.name}}</a></li>-->
+        <!--</ul>-->
+    <!--</div>-->
+    <!--<div ng-app = "" ng-init = "quantity = 1;cost = 30; student = {firstname:'Mahesh',lastname:'Parashar',rollno:101};marks = [80,90,75,76,60]">-->
+        <!--<p>Hello {{student.firstname + " " + student.lastname}}!</p>-->
+        <!--<p>Expense on Books : {{cost * quantity}} Rs</p>-->
+        <!--<p>Roll No: {{student.rollno}}</p>-->
+        <!--<p>Marks(Math): {{marks[3]}}</p>-->
+    <!--</div>-->
+</body>
+</html>
