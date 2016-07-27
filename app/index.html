@@ -41,9 +41,18 @@
 
     <span class="org">
         <ul class="menu-list" ng-controller="menuController as mc">
-            <li class="menu-item" ng-repeat="menuItem in mc.menuItems"><a class="item-link" ng-click="alert('hey');">{{menuItem.label}}</a></li>
+            <li class="menu-item" ng-repeat="menuItem in mc.menuItems">
+                <a id="{{menuItem.label}}" ng-class="{active: active}" ng-model="menuItem" ng-bind="menuItem.label" ng-click="updateItems();" ng->
+                </a>
+            </li>
         </ul>
     </span>
+    <br/>
+    <!--<form>-->
+        <!--<input type="number" ng-model="inp1"/>-->
+        <!--<input type="number" ng-model="inp2"/>-->
+        <!--<p>{{inp1+inp2}}</p>-->
+    <!--</form>-->
     <!--<div class="list-container" ng-controller="listController as lc">-->
         <!--{{}}-->
         <!--<ul class="list-{{}}">-->

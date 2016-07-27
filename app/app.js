@@ -2,38 +2,40 @@
 {
     var app = angular.module('worldCup',[]);
 
-    app.controller('menuController',
+    app.controller
+    (   'menuController',
         function ($scope)
         {
             this.menuItems = orgList;
-
-            var updateItems = function()
+            // this.active = false;
+            $scope.updateItems = function()
             {
-                return ['Nation', 'Player', 'Region'];
+                var item = this.menuItem;
+                console.log("updateItems");
+                console.log(item.label);
+                angular.element( document.querySelector('active')).removeClass("active");
+                angular.element(item).addClass("active");
+                // this.active = true;
             };
         }
     );
 
-    app.controller('listController',
-        function($event)
+    app.controller
+    (   'listController',
+        function()
         {
-            this.listItems = getItems($event);
+            this.listItems = updateItems();
             this.nations = nationList;
             this.regions = regionList;
             this.players = playerList;
         }
     );
 
-    var getItems = function($event)
-    {
-
-    }
-
     var orgList =
         [
-            {label:'Nation'},
-            {label: 'Region'},
-            {label: 'Player'}
+            nation = {label: 'Nation'},
+            region = {label: 'Region'},
+            player = {label: 'Player'}
         ]
 
     var nationList =
