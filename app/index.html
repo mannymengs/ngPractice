@@ -42,7 +42,15 @@
     <span class="org">
         <ul class="menu-list" ng-controller="menuController as mc">
             <li class="menu-item" ng-repeat="menuItem in mc.menuItems">
-                <a id="{{menuItem.label}}" ng-class="{active: active}" ng-model="menuItem" ng-bind="menuItem.label" ng-click="updateItems();" ng->
+                <a id="{{menuItem.label}}" ng-class="{active: active}" ng-model="menuItem" ng-bind="menuItem.label" ng-click="updateItems();">
+                </a>
+            </li>
+        </ul>
+    </span>
+    <span class="main">
+        <ul class="menu-list" ng-controller="listController as lc">
+            <li class="menu-item" ng-repeat="menuItem in lc.listItems">
+                <a id="{{listItem.label}}" ng-model="listItem" ng-bind="listItem.label" ng-click="">
                 </a>
             </li>
         </ul>

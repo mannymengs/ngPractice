@@ -7,24 +7,35 @@
         function ($scope)
         {
             this.menuItems = orgList;
-            // this.active = false;
+            // this.menuItems[0].addClass("active");
             $scope.updateItems = function()
             {
                 var item = this.menuItem;
-                console.log("updateItems");
-                console.log(item.label);
-                angular.element( document.querySelector('active')).removeClass("active");
-                angular.element(item).addClass("active");
-                // this.active = true;
+                // console.log("updateItems: "+item.label);
+                // var sel = '#'+item.label;
+                // angular.element(document.querySelectorAll('[ng-model=menuItem]')).removeClass("active");
+                // angular.element(document.querySelector(sel)).addClass("active");
+                angular.forEach
+                (
+                    $scope.menuItems,
+                    function (value, key)
+                    {
+                        console.log(key + ":" + value);
+                    }
+                );
+                item.active = true;
+                if(item.label=="Nation") {return nationList;}
+                if(item.label=="Player") {return playerList;}
+                if(item.label=="Region") {return regionList;}
             };
         }
     );
 
     app.controller
     (   'listController',
-        function()
+        function($scope)
         {
-            this.listItems = updateItems();
+            this.listItems = $scope.updateItems();
             this.nations = nationList;
             this.regions = regionList;
             this.players = playerList;
